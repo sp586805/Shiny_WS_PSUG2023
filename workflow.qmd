@@ -1,0 +1,82 @@
+---
+title: "workflow"
+format: html
+editor: visual
+---
+
+## workflow
+
+packages
+
+```{r}
+library(tidyverse)
+```
+
+data
+
+```{r}
+library(haven)
+dmae <- read_sas("https://github.com/philbowsher/Foundation-of-the-R-Workflow-workshop-2019-09-06/raw/master/Examples/data/dmae.sas7bdat", 
+    NULL)
+```
+
+```{r}
+install.packages("esquisse")
+```
+
+```{r}
+
+```
+
+ggplot
+
+```{r}
+dmae %>%
+ filter(!(AEBODSYS %in% "")) %>%
+ filter(!(AESOC %in% "")) %>%
+ filter(!(AESEV %in% "")) %>%
+ filter(!(AESER %in% 
+ "")) %>%
+ filter(!(AEACN %in% "")) %>%
+ filter(!(AEREL %in% "")) %>%
+ filter(!(AEOUT %in% "")) %>%
+ filter(!(AESDISAB %in% 
+ "")) %>%
+ filter(!(AESDTH %in% "")) %>%
+ filter(!(AESHOSP %in% "")) %>%
+ filter(!(AESLIFE %in% "")) %>%
+ filter(!(AESMIE %in% "")) %>%
+ filter(!(AECONTRT %in% "")) %>%
+ filter(!(EPOCH %in% "")) %>%
+ ggplot() +
+  aes(x = AESEV) +
+library(dplyr)
+library(ggplot2)
+
+dmae %>%
+ filter(!(AEBODSYS %in% "")) %>%
+ filter(!(AESOC %in% "")) %>%
+ filter(!(AESEV %in% "")) %>%
+ filter(!(AESER %in% 
+ "")) %>%
+ filter(!(AEACN %in% "")) %>%
+ filter(!(AEREL %in% "")) %>%
+ filter(!(AEOUT %in% "")) %>%
+ filter(!(AESDISAB %in% 
+ "")) %>%
+ filter(!(AESDTH %in% "")) %>%
+ filter(!(AESHOSP %in% "")) %>%
+ filter(!(AESLIFE %in% "")) %>%
+ filter(!(AESMIE %in% "")) %>%
+ filter(!(AECONTRT %in% "")) %>%
+ filter(!(EPOCH %in% "")) %>%
+ ggplot() +
+ aes(x = AESEV) +
+ geom_bar(fill = "#112446") +
+ theme_minimal()
+
+  geom_bar(fill = "#112446") +
+  theme_minimal()
+```
+
+dmae %\>% filter(!(AEBODSYS %in% "")) %\>% filter(!(AESOC %in%"")) %\>% filter(!(AESEV %in%"")) %\>% filter(!(AESER %in%"")) %\>% filter(!(AEACN %in%"")) %\>% filter(!(AEREL %in%"")) %\>% filter(!(AEOUT %in%"")) %\>% filter(!(AESDISAB %in%"")) %\>% filter(!(AESDTH %in%"")) %\>% filter(!(AESHOSP %in%"")) %\>% filter(!(AESLIFE %in%"")) %\>% filter(!(AESMIE %in%"")) %\>% filter(!(AECONTRT %in%"")) %\>% filter(!(EPOCH %in%"")) %\>% ggplot() + aes(x = AESEV) + geom_bar(fill ="#112446") + theme_minimal()`{r}`
